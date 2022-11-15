@@ -1,0 +1,34 @@
+<!-- This is applied on which you want to repeatedly apply -->
+<!-- <% project.forEach((ele)=>{%>               (#HTML_CODE_HERE)                       <%}); %> -->
+
+<!-- This is for adding the attribute  -->
+<!-- <% /*ele.attribute_name_from_table*/ %> -->
+
+
+<!-- Warning : Cautious on commenting in EJS -->
+
+
+<!-- for each ele in project - do the following -->
+<% project.forEach((ele)=>{%>
+    <h3>
+        <!-- add attribute which you want to render -->
+        <%=ele.u_name%> , <%=ele.age%> , <%=ele.mobile%>
+                    <!-- Tecnically we should call delete method, but here in browser we can request either get or post , so use any one of them -->
+                    <!-- But using postman you can ask action delete , but not in browser -->
+                    <form action="delete/<%=ele.u_id%>" method="post">
+                        <button type="submit" style="border-radius: 5px;" id="deluser"> Delete </button>
+                    </form>
+                    
+                    <form action="update/<%=ele.u_id%>" method="get">                                    
+                        <button type="submit" style="border-radius: 5px;" id="upduser"> Update </button>
+                    </form>
+                    
+
+    </h3>
+    <%});%>
+        <!-- whatever you write in href , should be handled in app.get() route -->
+        <!-- href ask server to send sign_up i.e it creates a get request to server -->
+
+        <!-- we are adding slash'/' at end so that it will accept (allow to append) upcoming routes i.e -->
+        <h1><a href="sign_up/">ADD MORE USERS</a></h1>
+        <h1><a href=""></a></h1>

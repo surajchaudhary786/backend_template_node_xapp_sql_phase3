@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signuptab</title>
+</head>
+
+<body>
+    <form action="sign_up" method="post">
+        <h2 style="padding-bottom:10px;">Sign Up</h2>
+        <p style="text-align: left;margin-bottom: -2px;padding-left: 10px;">Name<span style="color: red;">*</span></p>
+        <div class="form-floating"
+            style="z-index: 2;margin-bottom: 10px;border-bottom-right-radius: 0;border-bottom-left-radius: 0;">
+            <label for="name"></label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Abc" required>
+        </div>
+
+        <p style="text-align: left;margin-bottom: -2px;padding-left: 10px;">Password<span style="color: red;">*</span></p>
+        <div class="form-floating"
+            style="z-index: 2;margin-bottom: 10px;border-bottom-right-radius: 0;border-bottom-left-radius: 0;">
+            <label for="name"></label>
+            <input type="password" class="form-control" name="pass" id="pass" placeholder="pass" required>
+        </div>
+
+        <button type="submit" style="margin-top:5px;" id="btn123" class="btn btn-primary">Sign up</button>
+    </form>
+</body>
+
+</html>
