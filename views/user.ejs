@@ -7,6 +7,16 @@
 
 <!-- Warning : Cautious on commenting in EJS -->
 
+<form action="search" method="post">
+    <!-- <input type="text" name="searched"> -->
+    <div class="form-floating"
+        style="z-index: 2;margin-bottom: 10px;border-bottom-right-radius: 0;border-bottom-left-radius: 0;">
+        <label for="search"></label>
+        <input type="text" class="form-control" name="search" id="search" placeholder="Search" required>
+    </div>
+    <button type="submit" style="border-radius: 5px;" id="upduser"> Search </button>
+</form>
+
 
 <!-- for each ele in project - do the following -->
 <% project.forEach((ele)=>{%>
@@ -18,11 +28,11 @@
                     <form action="delete/<%=ele.u_id%>" method="post">
                         <button type="submit" style="border-radius: 5px;" id="deluser"> Delete </button>
                     </form>
-                    
-                    <form action="update/<%=ele.u_id%>" method="get">                                    
+
+                    <form action="update/<%=ele.u_id%>" method="get">
                         <button type="submit" style="border-radius: 5px;" id="upduser"> Update </button>
                     </form>
-                    
+
 
     </h3>
     <%});%>
@@ -31,4 +41,3 @@
 
         <!-- we are adding slash'/' at end so that it will accept (allow to append) upcoming routes i.e -->
         <h1><a href="sign_up/">ADD MORE USERS</a></h1>
-        <h1><a href=""></a></h1>

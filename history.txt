@@ -28,5 +28,9 @@ slash/ --------------------------> Will get appended and This will accept upcomi
 
 --------------------------------req.params.attribute vs req.body.attribute-------------
 
-when action is get ----------> req.params.attribute
-when action is post ---------> req.params.attribute
+when action is get ----------> req.params.attribute    ------------> the parameters are visible in url(unsafe) (it goes as in param)  eg : localhost:5000/user/search/search=sim?
+when action is post ---------> req.body.attribute    ------------> the parameters are not visible in url  (Because it goes as body)
+
+
+-------------------------------------SEARCHING TIP----------------------------------
+use post method , in some cases get wont work properly (handling with form)
