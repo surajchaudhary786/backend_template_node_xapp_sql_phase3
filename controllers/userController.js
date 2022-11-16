@@ -52,7 +52,7 @@ exports.deleteUser = async (req, res) => {
 
   // USING SQL QUERY------------->
 
-  let query = `DELETE FROM table1s WHERE u_id=${req.params.id}`;
+  let query = `DELETE FROM table1s WHERE u_id=${req.params.id}`;              
   await db.query(query);
 
   res.redirect("/user/");
@@ -60,7 +60,7 @@ exports.deleteUser = async (req, res) => {
 
 exports.redirectUpdatePage = async (req, res) => {
   // console.log(req.params.id);
-  res.render("us_update_form.ejs", { val: req.params.id });
+  res.render("us_update_form.ejs", { val: req.params.id });       //we are sending this to frontend so that accessing the id can make post req
 };
 
 exports.updateUser = async (req, res) => {
@@ -82,7 +82,7 @@ exports.updateUser = async (req, res) => {
 
 exports.searchUser = async (req, res) => {
   console.log(req.body.search);
-  let query = `SELECT * FROM table1s WHERE u_name LIKE "%${req.body.search}%"`;
+  let query = `SELECT * FROM table1s WHERE u_name LIKE "%${req.body.search}%"`; 
   const [results] = await db.query(query);
   console.log(results);
   res.render("us_searched_list.ejs", { project: results }); //This project will contain rows which will dynamically shown in home.ejs

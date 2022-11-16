@@ -7,6 +7,10 @@
 
 <!-- Warning : Cautious on commenting in EJS -->
 
+<p>.........................................................................................................................................</p>
+<h1><a href="sign_up/">ADD MORE USERS</a></h1>
+<p>........................................................................................................................................</p>
+<h1>Search User</h1>
 <form action="search" method="post">
     <!-- <input type="text" name="searched"> -->
     <div class="form-floating"
@@ -16,9 +20,11 @@
     </div>
     <button type="submit" style="border-radius: 5px;" id="upduser"> Search </button>
 </form>
+<p>.........................................................................................................................................</p>
 
 
 <!-- for each ele in project - do the following -->
+<h1>List</h1>
 <% project.forEach((ele)=>{%>
     <h3>
         <!-- add attribute which you want to render -->
@@ -40,4 +46,4 @@
         <!-- href ask server to send sign_up i.e it creates a get request to server -->
 
         <!-- we are adding slash'/' at end so that it will accept (allow to append) upcoming routes i.e -->
-        <h1><a href="sign_up/">ADD MORE USERS</a></h1>
+ <p>.........................................................................................................................................</p>       
